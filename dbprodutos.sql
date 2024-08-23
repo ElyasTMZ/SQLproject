@@ -38,7 +38,13 @@ select nome, tipo from produtos where valor < 150;
 
 select * from produtos where nome = 'Monitor' and tipo = 'Informatica';
 
-select * from produtos where tipo in ('Informatica', 'Telefone');
+select * from produtos where valor not between 250 and 600;
+
+select * from produtos where nome like '%o';
+
+select * from produtos where nome like 'a';
+
+
 
 
 

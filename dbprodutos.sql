@@ -44,7 +44,23 @@ select * from produtos where nome like '%o';
 
 select * from produtos where nome like 'a';
 
+select * from produtos order by valor limit 5;
 
+--integridade e cinsistencia--
+
+select usu.nome,prod.descricao,cli.nome
+from tbVendas as vend
+inner join tbUsuarios as usu 
+on vend.codUsu = usu.codUsu 
+inner join tbProdutos as prod 
+on vend.codProd = prod.codProd 
+inner join tbClientes as cli
+on vend.codCli = cli.codCli;
+
+select usu.nome as "nome de usuario", func.nome as "nome do funcionario"
+from tbUsuarios as usu
+inner join tbfuncionarios as func
+on usu.codFunc = func.codFunc;
 
 
 
